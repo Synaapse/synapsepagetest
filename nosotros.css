@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header{
+    width: 100vw;
+    height: 40vh;
+    background: #36b4ef;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(0, 0%, 100%, 0.74), rgba(46, 125, 170, 0.945)), url(img/hero2.jpg);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(0, 0%, 100%, 0.74), rgb(46, 125, 170, 0.945)), url(img/hero2.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+}
+
+.nav__items{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    padding: 10px 30px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition-property: background-color, text-decoration;
+    transition-duration: 1s;
+}
+
+.nav__items--hover:hover{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.425);
+}
+
+.nav__items--cta{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    transition-property: background-color;
+    transition-duration: 1s;
+
+}
+
+.nav__items--cta:hover{
+    background-color: rgba(255, 255, 255, 0.425);
+    border-radius: 50px;
+}
+
+.contenedor__texto{
+    margin-left: 80px;
+}
+
+.titulo{
+    color: rgba(0, 0, 0, 0.945);
+    font-size: 3em;
+}
+
+.wave{
+    position: absolute;
+    width: 100vw;
+    bottom: -1px;
+}
+
+.contenedor__historia{
+    width: 100vw;
+    height: 30vh;
+}
+
+.subtitulo__historia{
+    padding: 80px 0px 0px 0px;
+    text-align: center;
+}
+
+.parrafo__historia{
+    padding: 40px 50px 40px 80px;
+    line-height: 20pt;
+    text-align: center;
+}
+
+.contenedor__padre{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "img2 texto1 texto1"
+    "texto2 texto2 img1";
+    align-items: center;
+    padding: 90px 50px 60px 80px;
+}
+
+
+.contenedor__parrafo{
+    line-height: 20pt;
+}
+
+
+.contenedor__hijo-textos1{
+    grid-area: texto1;
+    padding-right: 400px;
+}
+
+.contenedor__hijo-img1{
+    grid-area: img2;
+}
+
+.contenedor__hijo-textos2{
+    grid-area: texto2;
+    padding-left: 390px;
+}
+
+.contenedor__hijo-img2{
+    grid-area: img1;
+}
+
+.contenedor__picture{
+    width: 300px;
+    height: 300px;
+}
+
+.footer{
+    background: rgba(196, 54, 54, 0.945);
+    padding: 40px 0px 20px 20px;
+}
+
+.container__footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav__items--footer:hover{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+.contenedor2{
+    color:#fff;
+}
+
+@media screen and (max-width:800px){
+    .parrafo__historia{
+        text-align: center;
+    }
+
+    .contenedor__padre{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "img2 texto1"
+        "texto2 img1";
+        align-items: center;
+        padding: 140px 80px 0px 30px;
+    }
+
+    .contenedor__hijo-textos1{
+        padding-right: 20px;
+    }
+    
+    .contenedor__hijo-textos2{
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width:500px){
+    .nav{
+        justify-content: space-evenly;
+    }
+
+    .parrafo__historia{
+        text-align: center;
+    }
+
+    .contenedor__padre{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "img2"
+        "texto1"
+        "img1"
+        "texto2";
+        align-items: center;
+        text-align: center;
+    }
+
+    .contenedor__hijo-img1{
+        padding-top: 80px;
+    }
+
+    .nav__items--footer:hover{
+        border: none;
+        border-radius: none;
+        text-decoration: none;
+    }
+} 
